@@ -1,0 +1,42 @@
+# Copy this to .dev.vars and fill in your values
+# .dev.vars is gitignored and used by wrangler dev
+
+# AI Provider - Workshop uses Cloudflare AI Gateway (configured below)
+# ANTHROPIC_API_KEY=sk-ant-...  # Not needed for workshop
+# OPENAI_API_KEY=sk-...  # Not needed for workshop
+
+# AI Gateway Configuration (required for runtime)
+AI_GATEWAY_ID=moltworker-workshop
+AI_GATEWAY_AUTH_TOKEN=your-ai-gateway-auth-token
+AI_MODEL=@cf/moonshotai/kimi-k2.5
+
+# R2 Storage (required for persistence)
+R2_ACCESS_KEY_ID=your-r2-access-key-id
+R2_SECRET_ACCESS_KEY=your-r2-secret-access-key
+
+# Gateway Token (required for Control UI access)
+# Generate with: openssl rand -hex 32
+MOLTBOT_GATEWAY_TOKEN=generate-with-openssl-rand-hex-32
+
+# Local development mode - skips Cloudflare Access auth and bypasses device pairing
+# DEV_MODE=true
+
+# E2E test mode - skips Cloudflare Access auth but keeps device pairing enabled
+# Use this for automated tests that need to test the real pairing flow
+# E2E_TEST_MODE=true
+
+# Enable debug routes at /debug/* (optional)
+# DEBUG_ROUTES=true
+
+# Cloudflare Access configuration for /_admin and /api routes
+# Required for admin UI and device pairing API in production
+# CF_ACCESS_TEAM_DOMAIN=myteam.cloudflareaccess.com
+# CF_ACCESS_AUD=your-application-audience-tag
+
+# Optional chat channels
+# TELEGRAM_BOT_TOKEN=optional
+# DISCORD_BOT_TOKEN=optional
+
+# CDP (Chrome DevTools Protocol) configuration for browser automation
+# CDP_SECRET=shared-secret-for-cdp-auth
+# WORKER_URL=https://your-worker.example.com

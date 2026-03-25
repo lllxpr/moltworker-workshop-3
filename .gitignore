@@ -1,0 +1,6 @@
+node_modules/
+.upstream/
+.dev.vars
+.workshop-config.json
+dist/
+.wrangler/
